@@ -1,0 +1,200 @@
+/* --- Modern Careers Page Styling --- */
+.career-hero {
+  background: linear-gradient(120deg, #0d6efd 0%, #6a7585 100%),
+    url("assets/img/career-banner.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 90px 20px 70px 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(13, 110, 253, 0.13);
+  position: relative;
+  overflow: hidden;
+}
+
+.career-hero::after {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: -60px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.career-hero h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 1;
+}
+
+.career-hero p {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Search Bar */
+.search-widget {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.search-widget input {
+  max-width: 500px;
+  display: inline-block;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid #0d6efd;
+  font-size: 1.15rem;
+  padding: 12px 18px;
+  box-shadow: 0 2px 12px rgba(13, 110, 253, 0.08);
+  outline: none;
+  transition: border 0.2s;
+}
+
+.search-widget input:focus {
+  border-color: #212529;
+}
+
+.search-widget button {
+  border-radius: 0 10px 10px 0;
+  font-size: 1.15rem;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #0d6efd 60%, #6a7585 100%);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(13, 110, 253, 0.08);
+  transition: background 0.2s;
+}
+
+.search-widget button:hover {
+  background: linear-gradient(90deg, #212529 60%, #6a7585 100%);
+}
+
+/* Filter Buttons */
+.text-center .btn {
+  min-width: 170px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.07);
+  border-radius: 8px;
+}
+
+.text-center .btn-outline-primary.active,
+.text-center .btn-outline-secondary.active,
+.text-center .btn-outline-dark.active {
+  background: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+  box-shadow: 0 4px 16px rgba(13, 110, 253, 0.13);
+}
+
+/* Job Cards */
+.job-card {
+  border: 1.5px solid #e3e3e3;
+  border-radius: 16px;
+  padding: 28px 24px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(13, 110, 253, 0.07);
+  transition: box-shadow 0.3s, transform 0.3s;
+  margin-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card::before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 120px;
+  height: 120px;
+  background: rgba(13, 110, 253, 0.07);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.job-card h5 {
+  color: #0d6efd;
+  font-weight: 800;
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.job-card p {
+  margin: 7px 0;
+  font-size: 1.08rem;
+  position: relative;
+  z-index: 1;
+}
+
+.job-card b {
+  color: #212529;
+}
+
+.job-card:hover {
+  box-shadow: 0 12px 40px rgba(13, 110, 253, 0.18);
+  transform: translateY(-6px) scale(1.015);
+  border-color: #0d6efd;
+}
+
+.apply-btn {
+  margin-top: 22px;
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
+
+.apply-btn .btn {
+  font-size: 1rem;
+  padding: 9px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.09);
+  transition: background 0.2s;
+}
+
+.apply-btn .btn:hover {
+  background: #212529;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .career-hero {
+    padding: 54px 8px 36px 8px;
+    font-size: 1.2rem;
+  }
+  .career-hero h1 {
+    font-size: 2rem;
+  }
+  .search-widget input {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .search-widget button {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .job-card {
+    padding: 16px 10px;
+  }
+}

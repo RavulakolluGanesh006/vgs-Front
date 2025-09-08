@@ -1,0 +1,23 @@
+/* Add in your main.css or inside <style> */
+.hero .carousel-container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 60px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.hero .btn-get-started {
+  background-color: #00bcd4;
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.hero .btn-get-started:hover {
+  background-color: #019aa3;
+  transform: scale(1.05);
+}
