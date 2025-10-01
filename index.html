@@ -34,6 +34,133 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Vagarious Solutions</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/vgs1.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+<style>
+    body { font-family: 'Poppins', sans-serif; margin:0; }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+    }
+    .navbar .nav-link {
+      color: #fff !important;
+      margin: 0 12px;
+      font-weight: 500;
+      position: relative;
+    }
+    .navbar .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -5px;
+      width: 0; height: 2px;
+      background: #0d6efd;
+      transition: width .3s;
+    }
+    .navbar .nav-link:hover::after { width: 100%; }
+
+    /* Hero Banner */
+    #hero {
+      height: 100vh;
+      background: url('assets/img/hero-carousel/hero-carousel-1.jpg') center/cover no-repeat fixed;
+      position: relative;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    #hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    }
+    #hero .content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 20px;
+    }
+    #hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      animation: fadeInDown 1s ease forwards;
+    }
+    #hero p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1.3s ease forwards;
+    }
+    .btn-hero {
+      margin-top: 25px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      border: none;
+      color: #fff;
+      background: linear-gradient(45deg,#0d6efd,#6610f2);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      transition: all .3s ease;
+    }
+    .btn-hero:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+
+    /* Keyframes */
+    @keyframes fadeInDown {
+      from { opacity:0; transform: translateY(-40px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity:0; transform: translateY(40px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+
+    /* Services */
+    .service {
+      padding: 30px; border-radius: 12px;
+      background: #fff; text-align: center;
+      transition: .3s; box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    }
+    .service:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0,0,0,.2); }
+    .service i { font-size: 2rem; color: #0d6efd; margin-bottom: 10px; }
+
+    /* Footer */
+    footer { background: #111; color: #bbb; padding: 20px 0; text-align: center; }
+    footer a { color: #0d6efd; text-decoration: none; }
+  </style>
 </head>
 
 <body class="index-page">
@@ -49,12 +176,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="career.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="/index.html" class="active">Home</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/career.html">Careers</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -64,202 +191,157 @@
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
-        <div class="carousel-item active">
-          <img id="carousel1" src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Welcome<br> to<br> VAGARIOUS SOLUTIONS<br></h2>
-            <p>Competitiveness and Quality is what Vagarious brings to its family of clients when it takes on any assignment. Our core strength is offering Staffing Services and IT development.</p>
-            <a href="#featured-services" class="btn-get-started">Get Started</a>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img id="carousel2" src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
-          <div class="carousel-container">
-            <h2>At vero eos et accusamus</h2>
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
-            <a href="#featured-services" class="btn-get-started">Get Started</a>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img id="carousel3" src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Temporibus autem quibusdam</h2>
-            <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-            <a href="#featured-services" class="btn-get-started">Get Started</a>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
-
-        <ol class="carousel-indicators"></ol>
-
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>About Us<br></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              Vagarious Solutions is a solitary point IT Staffing and Software solutions provider from small scale businesses to Multi-National organizations. Our solutions do not come out of a box ready to plug and play.
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo</span></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>We pride ourselves on distinguishing the challenges quickly and designing strategies to address them, continually keeping top of mind our client as requirements for insignificant disruption. </p>
-            <a href="about.html" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-
+  <main id="page-content" class="main">
+  <!-- Hero Section -->
+  <section id="hero" class="hero section dark-background">
+    <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-item active">
+        <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
+        <div class="carousel-container">
+          <h2>Welcome to<br>VAGARIOUS SOLUTIONS</h2>
+          <p>Vagarious Solutions delivers competitiveness and quality to clients by offering bespoke IT staffing and software solutions for businesses of all sizes. Our commitment is rapid challenge identification and solutions designed for minimal client disruption and maximal impact.</p>
+          <a href="#services" class="btn-get-started">Get Started</a>
         </div>
-
       </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section light-background">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img id="client1" src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img id="client2" src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img id="client3" src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img id="client4" src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img id="client5" src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img id="client6" src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
+      <!-- Add additional carousel items as needed -->
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About</h2>
+      <p>Our Company</p>
+    </div>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+          <p>
+            Vagarious Solutions is your solitary point of contact for IT staffing and custom-built software solutions, ranging from small businesses to multinational enterprises.
+            No generic "plug and play" solutions here—everything is designed for your unique requirements.
+          </p>
+          <ul>
+            <li><i class="bi bi-check2-circle"></i> <span>Rapid understanding of client challenges and agile, strategic responses.</span></li>
+            <li><i class="bi bi-check2-circle"></i> <span>Continuously evolving solutions for seamless integration with minimal business disruption.</span></li>
+            <li><i class="bi bi-check2-circle"></i> <span>Dedication to excellence in both short-term staffing and long-term IT development projects.</span></li>
+          </ul>
         </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-briefcase icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-card-checklist icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Dolor Sitema</a></h4>
-                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-bar-chart icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Sed ut perspiciatis</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-binoculars icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Magni Dolores</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-brightness-high icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Nemo Enim</a></h4>
-                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="bi bi-calendar4-week icon flex-shrink-0"></i>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Eiusmod Tempor</a></h4>
-                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <p>
+            We pride ourselves on understanding challenges quickly and designing strategies to address them, always keeping our client's requirements and continuity top of mind.
+          </p>
+          <a href="about.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
         </div>
-
       </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item d-flex position-relative h-100">
+            <i class="bi bi-briefcase icon flex-shrink-0"></i>
+            <div>
+              <h4 class="title"><a href="" class="stretched-link">IT Staffing</a></h4>
+              <p class="description">Our core strength is delivering the right IT professionals for your team, from temporary to permanent positions, ensuring the success of your project or business operations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item d-flex position-relative h-100">
+            <i class="bi bi-bar-chart icon flex-shrink-0"></i>
+            <div>
+              <h4 class="title"><a href="" class="stretched-link">Software Development</a></h4>
+              <p class="description">We offer end-to-end software development, customizing solutions according to your business needs with a focus on scalability, agility, and performance.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more services if needed -->
+      </div>
+    </div>
+  </section>
+  <!-- You can retain the rest of your sections (Clients, Portfolio, Contact, etc.) as needed -->
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const content = document.getElementById("page-content");
 
-    </section><!-- /Services Section -->
+  // Intercept nav hover + clicks
+  document.querySelectorAll("nav a").forEach(link => {
+    // Load on hover
+    link.addEventListener("mouseenter", e => {
+      const url = link.getAttribute("href");
+      if (url && url.endsWith(".html")) {
+        e.preventDefault();
 
-    
+        // ✅ force root-relative
+        const cleanUrl = url.startsWith("/") ? url : "/" + url;
 
-  </main>
+        loadPage(cleanUrl);
+        history.pushState({url: cleanUrl}, "", cleanUrl);
+      }
+    });
+
+    // Still allow click navigation
+    link.addEventListener("click", e => {
+      const url = link.getAttribute("href");
+      if (url && url.endsWith(".html")) {
+        e.preventDefault();
+
+        // ✅ force root-relative
+        const cleanUrl = url.startsWith("/") ? url : "/" + url;
+
+        loadPage(cleanUrl);
+        history.pushState({url: cleanUrl}, "", cleanUrl);
+      }
+    });
+  });
+
+  // Handle browser back/forward
+  window.addEventListener("popstate", e => {
+    if (e.state?.url) loadPage(e.state.url);
+  });
+
+  async function loadPage(url) {
+    try {
+      const res = await fetch(url);
+      const text = await res.text();
+
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, "text/html");
+      const newContent = doc.querySelector("main");
+
+      if (newContent) {
+        content.classList.add("fade-out");
+        setTimeout(() => {
+          content.innerHTML = newContent.innerHTML;
+          content.classList.remove("fade-out");
+          content.classList.add("fade-in");
+          setTimeout(() => content.classList.remove("fade-in"), 300);
+
+          // Re-run scripts inside loaded page
+          newContent.querySelectorAll("script").forEach(oldScript => {
+            const newScript = document.createElement("script");
+            if (oldScript.src) {
+              newScript.src = oldScript.src;
+            } else {
+              newScript.textContent = oldScript.textContent;
+            }
+            document.body.appendChild(newScript);
+          });
+        }, 300);
+      }
+    } catch (err) {
+      console.error("Failed to load page:", err);
+    }
+  }
+});
+</script>
+
+<style>
+#page-content.fade-out { opacity: 0; transition: opacity .3s ease; }
+#page-content.fade-in  { opacity: 1; transition: opacity .3s ease; }
+</style>
 
   <footer id="footer" class="footer dark-background">
 

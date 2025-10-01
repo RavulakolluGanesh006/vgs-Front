@@ -1,15 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+}
+
+
 /* --- Modern Careers Page Styling --- */
 .career-hero {
-  background: linear-gradient(120deg, #0d6efd 0%, #6a7585 100%),
+  background: linear-gradient(120deg, rgb(162, 166, 167), rgb(220, 239, 245));
+  background: linear-gradient(120deg, rgb(220, 239, 245), rgb(220, 239, 245)),
     url("assets/img/career-banner.jpg") center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 90px 20px 70px 20px;
   border-radius: 18px;
-  box-shadow: 0 10px 40px rgba(13, 110, 253, 0.13);
+ 
   position: relative;
   overflow: hidden;
 }
+.career-hero {
+  background: rgb(220, 239, 245) !important;
+}
+
 
 .career-hero::after {
   content: "";
@@ -18,7 +32,7 @@
   top: -60px;
   width: 100px;
   height: 100px;
-  background: rgba(255, 255, 255, 0.08);
+
   border-radius: 50%;
   z-index: 0;
 }
@@ -28,7 +42,7 @@
   font-weight: 900;
   letter-spacing: 2px;
   margin-bottom: 18px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+ 
   position: relative;
   z-index: 1;
 }
@@ -51,23 +65,23 @@
   max-width: 500px;
   display: inline-block;
   border-radius: 10px 0 0 10px;
-  border: 2px solid #0d6efd;
+  border: 2px solid  rgb(220, 239, 245);
   font-size: 1.15rem;
   padding: 12px 18px;
-  box-shadow: 0 2px 12px rgba(13, 110, 253, 0.08);
+  box-shadow: 0 2px 12px rgba(13, 121, 253, 0.08);
   outline: none;
   transition: border 0.2s;
 }
 
 .search-widget input:focus {
-  border-color: #212529;
+  border-color: rgb(220, 239, 245);
 }
 
 .search-widget button {
   border-radius: 0 10px 10px 0;
   font-size: 1.15rem;
   padding: 12px 28px;
-  background: linear-gradient(90deg, #0d6efd 60%, #6a7585 100%);
+  background: linear-gradient(90deg,  rgb(220, 239, 245), 60%,  rgb(220, 239, 245),);
   color: #fff;
   border: none;
   font-weight: 700;
@@ -75,9 +89,7 @@
   transition: background 0.2s;
 }
 
-.search-widget button:hover {
-  background: linear-gradient(90deg, #212529 60%, #6a7585 100%);
-}
+
 
 /* Filter Buttons */
 .text-center .btn {
@@ -94,13 +106,13 @@
 .text-center .btn-outline-primary.active,
 .text-center .btn-outline-secondary.active,
 .text-center .btn-outline-dark.active {
-  background: #0d6efd;
+  background: rgb(220, 239, 245);
   color: #fff;
-  border-color: #0d6efd;
+  border-color:  rgb(220, 239, 245);
   box-shadow: 0 4px 16px rgba(13, 110, 253, 0.13);
 }
 
-/* Job Cards */
+/* Job Cards
 .job-card {
   border: 1.5px solid #e3e3e3;
   border-radius: 16px;
@@ -173,7 +185,39 @@
 .apply-btn .btn:hover {
   background: #212529;
   color: #fff;
+} */
+
+/* Job Card Styling */
+.job-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  transition: all 0.3s ease;
 }
+
+.job-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.job-card h5 {
+  color: #0d6efd;           /* Bootstrap primary blue */
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.job-card p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.job-card .apply-btn {
+  margin-top: 15px;
+  text-align: right;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -197,4 +241,26 @@
   .job-card {
     padding: 16px 10px;
   }
+}
+.toggle-btn {
+  background: #6f42c1;        /* Bootstrap purple */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* change + to – when open */
+.toggle-btn[aria-expanded="true"] i::before {
+  content: "\f068"; /* bi-dash-lg (minus icon) */
 }
